@@ -7,14 +7,13 @@ export default function Home() {
       <section className="px-8 py-20 md:px-16 lg:px-24">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-            Hi, I&apos;m <span className="text-accent">Nick</span>
+            Hi, I'm <span className="text-accent">Nick</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted mb-8">
-            Software Developer
+            Computer Science Student
           </p>
           <p className="text-lg text-muted leading-relaxed max-w-2xl">
-            Welcome to my portfolio. I build software, tinker with hardware,
-            and occasionally make games. Take a look around to see what I&apos;ve been working on.
+            I build anything from software to sometimes hardware projects, so take a gander at what I've done!
           </p>
         </div>
       </section>
@@ -27,13 +26,12 @@ export default function Home() {
           </h2>
           <div className="space-y-4 text-muted leading-relaxed">
             <p>
-              I&apos;m a developer passionate about building things that matter.
-              My interests span across software development, game development,
-              and hardware projects.
+              I'm a soon-to-be-graduating computer science student from the University of Florida with a minor in digital arts and sciences.
+              What brought me to computer science was a strong love for computers starting at an early age, and the many games I played throughout the years.
             </p>
             <p>
-              When I&apos;m not coding, you can find me exploring new technologies,
-              contributing to open source, or working on personal projects.
+              My days are spent going to class and doing work at the library until I'm tired enough to go home. Beyond work, you can
+              find me playing games at home or spending time with the amazing friends I've made in college.
             </p>
           </div>
         </div>
