@@ -1,42 +1,53 @@
 import { Mail, Github, Linkedin, FileText } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="px-8 py-20 md:px-16 lg:px-24">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-            Hi, I'm <span className="text-accent">Nick</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted mb-8">
-            Computer Science Student
-          </p>
-          <p className="text-lg text-muted leading-relaxed max-w-2xl">
-            I build anything from software to sometimes hardware projects, so take a gander at what I've done!
-          </p>
+      <div className="flex flex-col md:flex-row">
+        {/* Left column: Hero + About */}
+        <div className="flex-1 flex flex-col">
+          {/* Hero Section */}
+          <section className="px-8 py-20 md:px-16 lg:px-24 z-10">
+            <div className="max-w-4xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+                Hi, I'm <span className="text-accent">Nick</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted mb-8">
+                Experienced Thinkpad Enthusiast
+              </p>
+              <div className="max-w-4xl">
+                <h2 className="text-2xl font-semibold text-foreground mb-6">
+                  About Me
+                </h2>
+                <div className="space-y-4 text-muted leading-relaxed">
+                  <p>
+                    Born and raised in South Florida, I grew up playing a lot of games. Maybe it was some type of exposure therapy or stockholm,
+                    but it made me want to study computer science at the University of Florida. From software engineering to penetration testing, 
+                    I found myself liking too many things in computer science to the point where I can't decide. I guarantee, however, that I love 
+                    my Arch Linux (btw) Thinkpad T440p from 2013 that I bought off of eBay for $60.
+                  </p>
+                  <p>
+                    Feel free to browse around this home page for a quick overview of my main skills as well as some ways to contact me below.
+                    I have a projects page too where I show off all the fun things I've built either alone or with friends, so check that out!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-
-      {/* About Section */}
-      <section className="px-8 py-16 md:px-16 lg:px-24 bg-surface">
-        <div className="max-w-4xl">
-          <h2 className="text-2xl font-semibold text-foreground mb-6">
-            About Me
-          </h2>
-          <div className="space-y-4 text-muted leading-relaxed">
-            <p>
-              I'm a soon-to-be-graduating computer science student from the University of Florida with a minor in digital arts and sciences.
-              What brought me to computer science was a strong love for computers starting at an early age, and the many games I played throughout the years.
-            </p>
-            <p>
-              My days are spent going to class and doing work at the library until I'm tired enough to go home. Beyond work, you can
-              find me playing games at home or spending time with the amazing friends I've made in college.
-            </p>
+        {/* Right column: Image */}
+        <div className="flex-1 flex justify-center items-center relative mt-8">
+          <div className="w-150 h-130 relative">
+            <Image
+              src="/headshot.jpg"
+              alt="Nick"
+              fill
+              className="rounded-lg object-cover"
+            />
           </div>
         </div>
-      </section>
-
+      </div>
       {/* Skills Section */}
       <section className="px-8 py-16 md:px-16 lg:px-24">
         <div className="max-w-4xl">
@@ -55,7 +66,8 @@ export default function Home() {
             ].map((skill) => (
               <span
                 key={skill}
-                className="px-4 py-2 bg-surface border border-border rounded-lg text-sm text-muted hover:text-accent hover:border-accent/50 transition-colors"
+                className="px-4 py-2 border border-border rounded-lg 
+                text-sm text-muted hover:text-accent hover:border-accent/50 transition-colors"
               >
                 {skill}
               </span>
@@ -65,33 +77,32 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="px-8 py-16 md:px-16 lg:px-24 bg-surface">
+      <section className="px-8 py-8 md:px-16 lg:px-24 bg-surface flex justify-center text-center">
         <div className="max-w-4xl">
           <h2 className="text-2xl font-semibold text-foreground mb-6">
-            Get in Touch
+            Contact
           </h2>
-          <p className="text-muted mb-8">
-            Feel free to reach out if you want to collaborate or just say hi!
-          </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="mailto:your.email@example.com"
-              className="flex items-center gap-2 px-4 py-2 bg-elevated border border-border rounded-lg text-muted hover:text-accent hover:border-accent/50 transition-colors"
+              href="mailto:nicolasvaliente779@gmail.com"
+              className="flex items-center gap-2 px-4 py-2 bg-elevated border border-border rounded-lg 
+              text-muted hover:text-accent hover:border-accent/50 transition-colors"
             >
               <Mail size={18} />
               <span>Email</span>
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/nickv779"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-elevated border border-border rounded-lg text-muted hover:text-accent hover:border-accent/50 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-elevated border border-border rounded-lg 
+              text-muted hover:text-accent hover:border-accent/50 transition-colors"
             >
               <Github size={18} />
               <span>GitHub</span>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/nicolasvaliente"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-elevated border border-border rounded-lg text-muted hover:text-accent hover:border-accent/50 transition-colors"
@@ -111,13 +122,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="px-8 py-8 md:px-16 lg:px-24 border-t border-border">
-        <p className="text-sm text-muted">
-          © {new Date().getFullYear()} Nick. Built with Next.js and Tailwind CSS.
-        </p>
-      </footer>
     </div>
   );
 }
