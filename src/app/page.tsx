@@ -1,6 +1,33 @@
 import { Mail, Github, Linkedin, FileText } from "lucide-react";
 import Image from "next/image";
 
+const skillGroups = [
+  {
+    title: "Programming and Scripting Languages",
+    skills: ["C", "C++", "C#", "Python", "Java", "JavaScript", "TypeScript", "HTML", "CSS", "SQL", "Bash", "Powershell", "Lua", "MATLAB", "AutoHotkey", "YARA"],
+  },
+  {
+    title: "Web Frameworks & Toolkits",
+    skills: ["React", "React Native", "Angular", "Flask", "Spring Boot", "Firebase", "Node.js", "Docker", "GIMP Toolkit"],
+  },
+  {
+    title: "Tools & Platforms",
+    skills: ["Git", "Linux", "JUnit", "Swagger", "Jira", "Confluence", "Figma", "MariaDB", "Ghidra"],
+  },
+  {
+    title: "Machine Learning",
+    skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "PyTorch", "Keras", "Jupyter Notebook", "Google Colab"],
+  },
+  {
+    title: "Network & Security",
+    skills: ["NMAP", "OSINT", "Wireshark"],
+  },
+  {
+    title: "Game Development & Art",
+    skills: ["Unity", "LOVE2D", "Krita"],
+  }
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -49,31 +76,34 @@ export default function Home() {
         </div>
       </div>
       {/* Skills Section */}
-      <section className="px-8 py-16 md:px-16 lg:px-24">
-        <div className="max-w-4xl">
-          <h2 className="text-2xl font-semibold text-foreground mb-6">
-            Skills & Technologies
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {[
-              "TypeScript",
-              "React",
-              "Next.js",
-              "Node.js",
-              "Python",
-              "Git",
-              "Linux",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="px-4 py-2 border border-border rounded-lg 
-                text-sm text-muted hover:text-accent hover:border-accent/50 transition-colors"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+      <section className="px-8 py-16 md:px-16 lg:px-24 bg-surface">
+        <h1 className="text-2xl font-bold text-foreground mb-6 text-center">
+          Skills & Technologies
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-8">
+          {skillGroups.map((group) => (
+            <div key={group.title} className="flex flex-col items-center">
+              
+              {/* Title */}
+              <h3 className="text-lg font-medium text-foreground mb-4">
+                {group.title}
+              </h3>
+
+              {/* Skills */}
+              <div className="flex flex-wrap gap-3 justify-center">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-2 border border-border rounded-lg text-sm text-muted hover:text-accent hover:border-accent/50 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+            </div>
+          ))}
+        </div>      
       </section>
 
       {/* Contact Section */}
