@@ -23,13 +23,6 @@ export default function SideRail() {
   return (
     <nav className="fixed left-0 top-0 h-full w-14 hover:w-40 bg-surface border-r border-border transition-all duration-300 ease-in-out z-50 group">
       <div className="flex flex-col h-full py-6">
-        {/* Logo / Brand */}
-        <div className="px-4 mb-8">
-          <div className="w-6 h-6 rounded bg-accent flex items-center justify-center text-background font-bold text-sm">
-            N
-          </div>
-        </div>
-
         {/* Navigation Items */}
         <div className="flex flex-col gap-2 px-2">
           {navItems.map((item) => {
@@ -55,13 +48,6 @@ export default function SideRail() {
 
         {/* Bottom spacer */}
         <div className="flex-1" />
-
-        {/* Footer hint */}
-        <div className="px-4 py-2">
-          <span className="text-xs text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-            Nick&apos;s Portfolio
-          </span>
-        </div>
       </div>
     </nav>
   );

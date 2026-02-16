@@ -56,7 +56,7 @@ export default function Home() {
                   </p>
                   <p>
                     Feel free to browse around this home page for a quick overview of my main skills as well as some ways to contact me below.
-                    I have a projects page too where I show off all the fun things I've built either alone or with friends, so check that out!
+                    I also have a few pages, including a projects page of all the fun things I've worked on, so check those out too!
                   </p>
                 </div>
               </div>
