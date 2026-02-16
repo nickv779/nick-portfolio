@@ -20,7 +20,7 @@ const skillGroups = [
   },
   {
     title: "Network & Security",
-    skills: ["NMAP", "OSINT", "Wireshark"],
+    skills: ["Nmap", "OSINT", "Wireshark"],
   },
   {
     title: "Game Development & Art",
@@ -31,7 +31,7 @@ const skillGroups = [
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row mb-12">
         {/* Left column: Hero + About */}
         <div className="flex-1 flex flex-col">
           {/* Hero Section */}
@@ -52,7 +52,7 @@ export default function Home() {
                     Born and raised in South Florida, I grew up playing a lot of games. Maybe it was some type of exposure therapy or stockholm,
                     but it made me want to study computer science at the University of Florida. From software engineering to penetration testing, 
                     I found myself liking too many things in computer science to the point where I can't decide. I guarantee, however, that I love 
-                    my Arch Linux (btw) Thinkpad T440p from 2013 that I bought off of eBay for $60.
+                    my Arch Linux (btw) Thinkpad T440p from 2013 that I bought off of eBay for $60 the most.
                   </p>
                   <p>
                     Feel free to browse around this home page for a quick overview of my main skills as well as some ways to contact me below.
@@ -77,7 +77,7 @@ export default function Home() {
       </div>
       {/* Skills Section */}
       <section className="px-8 py-16 md:px-16 lg:px-24 bg-surface">
-        <h1 className="text-2xl font-bold text-foreground mb-6 text-center">
+        <h1 className="text-2xl font-bold text-foreground mb-10 text-center">
           Skills & Technologies
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-8">

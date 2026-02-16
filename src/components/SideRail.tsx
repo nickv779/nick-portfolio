@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, FolderKanban } from "lucide-react";
+import { Home, FolderKanban, School, Briefcase} from "lucide-react";
 
 interface NavItem {
   href: string;
@@ -12,6 +12,8 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { href: "/", icon: <Home size={20} />, label: "Home" },
+  { href: "/education", icon: <School size={20} />, label: "Education"},
+  { href: "/experience", icon: <Briefcase size={20} />, label: "Experience"},
   { href: "/projects", icon: <FolderKanban size={20} />, label: "Projects" },
 ];
 
