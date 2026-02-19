@@ -13,7 +13,7 @@ export default function Home() {
             they tell a much better story of who I am.
           </p>
           <div className="flex-1 flex flex-col md:flex-row">
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col mt-8 px-4">
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2">
                 University of Florida
               </h1>
@@ -36,13 +36,13 @@ export default function Home() {
                 While at UF, I was fortunate enough to engage with a lot of opportunities. I enrolled into the STEPUP
                 program for my first 6 weeks of college. I became involved with the Open Source Club and stuck with
                 the organization for all my 4 years in college. I've also hung around other organizations, like the
-                gaming and anime clubs and other computer science related ones on occassion.
+                gaming and anime clubs and other computer science related ones.
               </p>
             </div>
             <div className="flex-1 flex justify-center items-center relative mt-8">
-              <div className="w-200 h-130 relative">
+              <div className="w-180 h-130 relative">
                 <Image
-                  src="/headshot.jpg"
+                  src="/uf.png"
                   alt="Nick"
                   fill
                   className="rounded-lg object-cover"
