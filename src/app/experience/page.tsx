@@ -10,7 +10,7 @@ export default function Home() {
             Experiences & Involvement
           </h1>
           <p className="space-y-4 text-muted leading-relaxed mb-8 max-w-3xl">
-            Simply a listing of all the fun positions I've held with a bit more of a story than my resume could tell.
+            Simply a listing of all the positions I've held with a bit more of a story than my resume could tell.
           </p>
           {Experiences.map(exp => (
             <div className="flex-1 flex flex-col md:flex-row">
