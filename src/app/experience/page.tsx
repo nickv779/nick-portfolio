@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Experiences } from "./experiences.ts";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
           <p className="space-y-4 text-muted leading-relaxed mb-8 max-w-3xl">
             Simply a listing of all the positions I've held with a bit more of a story than my resume could tell.
           </p>
-          {Experiences.map(exp => (
+          {Experiences.map((exp, index) => (
+            <Fragment key={index}>
             <div className="flex-1 flex flex-col md:flex-row">
               <div className="flex-1 flex flex-col mt-8 px-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2">
@@ -29,16 +31,17 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex-1 flex justify-center items-center relative mt-8">
-                <div className="w-180 h-130 relative">
+                <div className="w-180 h-130 relative overflow-hidden rounded-lg">
                   <Image
                     src={exp.imageURL}
                     alt="image"
                     fill
-                    className="rounded-lg object-cover"
                   />
                 </div>
               </div>
             </div>
+            {index < Experiences.length - 1 && <hr className="border-muted my-8 w-5/10 ml-4 mr-auto" />}
+            </Fragment>
           ))}
         </div>
       </section>

@@ -46,7 +46,7 @@ export default function ProjectCard({ frontmatter, onClick }: ProjectCardProps) 
         </h3>
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-3 mt-2">
-            {tags.map((tag) => (
+            {tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
                 className="px-3 py-2 text-xs bg-elevated text-muted rounded-full"

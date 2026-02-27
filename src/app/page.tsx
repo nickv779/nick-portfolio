@@ -12,7 +12,7 @@ const skillGroups = [
   },
   {
     title: "Tools & Platforms",
-    skills: ["Git", "Linux", "JUnit", "Swagger", "Jira", "Confluence", "Figma", "MariaDB", "Ghidra"],
+    skills: ["Git", "Linux", "JUnit", "Swagger", "Jira", "Confluence", "Figma", "MariaDB", "Ghidra", "Proxmox"],
   },
   {
     title: "Machine Learning",
@@ -20,11 +20,11 @@ const skillGroups = [
   },
   {
     title: "Network & Security",
-    skills: ["Nmap", "OSINT", "Wireshark"],
+    skills: ["Nmap", "OSINT", "Wireshark", "HashCat"],
   },
   {
     title: "Game Development & Art",
-    skills: ["Unity", "LOVE2D", "Krita"],
+    skills: ["Unity", "LOVE2D", "Krita", "Android OpenGL"],
   }
 ];
 
@@ -51,12 +51,9 @@ export default function Home() {
                   <p>
                     Born and raised in South Florida, I grew up playing a lot of games. Maybe it was some type of exposure therapy or stockholm,
                     but it made me want to study computer science at the University of Florida. From software engineering to penetration testing, 
-                    I found myself liking too many things in computer science to the point where I can't decide. I guarantee, however, that I love 
-                    my Arch Linux (btw) Thinkpad T440p from 2013 that I bought off of eBay for $60 the most.
-                  </p>
-                  <p>
-                    Feel free to browse around this home page for a quick overview of my main skills as well as some ways to contact me below.
-                    I also have a few pages, including a projects page of all the fun things I've worked on, so check those out too!
+                    I found myself liking too many things in computer science to the point where I couldn't decide what I loved most. However, I
+                    can now confidentally guarantee that I love my Arch Linux (btw) Thinkpad T440p from 2013 that I bought off of eBay for $60 the 
+                    most.
                   </p>
                 </div>
               </div>
@@ -65,12 +62,12 @@ export default function Home() {
         </div>
         {/* Right column: Image */}
         <div className="flex-1 flex justify-center items-center relative mt-8">
-          <div className="w-150 h-130 relative">
+          <div className="w-200 h-130 relative">
             <Image
-              src="/headshot.jpg"
+              src="/pictures/headshot.jpg"
               alt="Nick"
               fill
-              className="rounded-lg object-cover"
+              className="rounded-lg"
             />
           </div>
         </div>

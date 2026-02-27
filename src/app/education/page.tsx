@@ -58,7 +58,7 @@ export default function Home() {
             <div className="flex-1 flex justify-center items-center relative mt-8">
               <div className="w-180 h-130 relative">
                 <Image
-                  src="/uf.png"
+                  src="/uf.jpg"
                   alt="Nick"
                   fill
                   className="rounded-lg object-cover"
