@@ -10,7 +10,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ frontmatter, onClick }: ProjectCardProps) {
-  const { title, subtitle, description, image, category } = frontmatter;
+  const { title, subtitle, tags, description, image, category } = frontmatter;
 
   return (
     <button
@@ -44,7 +44,18 @@ export default function ProjectCard({ frontmatter, onClick }: ProjectCardProps) 
         <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
           {title}
         </h3>
-        <p className="text-sm text-accent/80 mt-1">{subtitle}</p>
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-3 mt-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-2 text-xs bg-elevated text-muted rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         <p className="text-sm text-muted mt-2 line-clamp-2">{description}</p>
       </div>
     </button>
